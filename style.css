@@ -212,6 +212,7 @@ body {
 .btn-small {
     padding: 0.5rem 1.5rem;
     font-size: 0.9rem;
+    min-height: 44px; /* Accessibility: minimum touch target size */
 }
 
 .hero-image {
@@ -443,6 +444,7 @@ section {
     background: var(--card-bg);
     border-radius: 15px;
     min-width: 150px;
+    min-height: 48px; /* Accessibility: minimum touch target size */
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -552,6 +554,9 @@ section {
         font-size: 1.1rem;
         border-radius: 8px;
         transition: all 0.3s ease;
+        min-height: 48px; /* Accessibility: minimum touch target size */
+        display: flex;
+        align-items: center;
     }
 
     .nav-menu a:hover {
@@ -672,15 +677,18 @@ button:focus {
     outline-offset: 2px;
 }
 
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-    outline: none;
-}
-
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+/* For browsers that support focus-visible, only show outline for keyboard focus */
+@supports selector(:focus-visible) {
+    a:focus:not(:focus-visible),
+    button:focus:not(:focus-visible) {
+        outline: none;
+    }
+    
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
 }
 
 /* Skip to content link for screen readers */
