@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu if open
             const navMenu = document.querySelector('.nav-menu');
             const navToggle = document.querySelector('.nav-toggle');
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navToggle && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 navToggle.setAttribute('aria-expanded', 'false');
             }
