@@ -7,6 +7,7 @@
     --text-secondary: #a0a0a0;
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-2: linear-gradient(135deg, #0066ff 0%, #00c9ff 100%);
+    --gradient-bg: linear-gradient(180deg, var(--dark-bg) 0%, var(--card-bg) 50%, var(--dark-bg) 100%);
 }
 
 * {
@@ -214,7 +215,7 @@ section {
 
 /* About Section */
 .about {
-    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--card-bg) 50%, var(--dark-bg) 100%);
+    background: var(--gradient-bg);
 }
 
 .about-content {
@@ -274,7 +275,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--card-bg) 50%, var(--dark-bg) 100%);
+    background: var(--gradient-bg);
 }
 
 .projects-grid {
@@ -369,7 +370,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--card-bg) 100%);
+    background: var(--gradient-bg);
 }
 
 .social-links {

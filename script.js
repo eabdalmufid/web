@@ -47,13 +47,13 @@ window.addEventListener('scroll', () => {
 
 // Typing effect for hero text
 const typingText = document.querySelector('.typing-text p');
-if (typingText) {
-    const text = typingText.textContent;
-    const parts = text.split(' • ');
+if (typingText && typingText.textContent) {
+    const text = typingText.textContent.trim();
+    const parts = text.split(' • ').filter(part => part.length > 0);
     let currentPart = 0;
     
     function typeText() {
-        if (currentPart < parts.length) {
+        if (parts.length > 0 && currentPart < parts.length) {
             typingText.textContent = parts[currentPart];
             currentPart = (currentPart + 1) % parts.length;
         }
